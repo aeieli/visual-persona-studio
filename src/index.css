@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    background: #fff9f7;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Yu Gothic", "Yu Gothic UI", "Noto Sans JP", system-ui, sans-serif;
+    color: #2d2525;
+    text-rendering: optimizeLegibility;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+}
+
+@layer utilities {
+  .jp-flow-page {
+    position: relative;
+    overflow-x: hidden;
+    background:
+      radial-gradient(circle at 12% 8%, rgba(255, 216, 224, 0.72), transparent 28%),
+      radial-gradient(circle at 82% 16%, rgba(193, 217, 204, 0.42), transparent 32%),
+      radial-gradient(circle at 70% 86%, rgba(228, 204, 190, 0.42), transparent 30%),
+      linear-gradient(135deg, #fffaf8 0%, #fdf3f3 42%, #f7faf4 100%);
+  }
+
+  .jp-flow-page::before,
+  .jp-flow-page::after {
+    content: "";
+    position: fixed;
+    inset: auto;
+    z-index: 0;
+    pointer-events: none;
+    border: 1px solid rgba(176, 124, 128, 0.18);
+    filter: blur(0.2px);
+  }
+
+  .jp-flow-page::before {
+    width: 62vw;
+    height: 38vw;
+    min-width: 620px;
+    min-height: 380px;
+    left: -18vw;
+    top: 12vh;
+    border-radius: 48% 52% 45% 55%;
+    transform: rotate(-18deg);
+    background: linear-gradient(125deg, rgba(255, 255, 255, 0.58), rgba(255, 224, 231, 0.2), transparent 70%);
+  }
+
+  .jp-flow-page::after {
+    width: 54vw;
+    height: 34vw;
+    min-width: 540px;
+    min-height: 340px;
+    right: -20vw;
+    bottom: 6vh;
+    border-radius: 58% 42% 50% 50%;
+    transform: rotate(14deg);
+    background: linear-gradient(130deg, rgba(224, 238, 226, 0.48), rgba(255, 255, 255, 0.4), transparent 72%);
+  }
+
+  .jp-shell {
+    position: relative;
+    z-index: 1;
+  }
+
+  .jp-glass {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(216, 187, 184, 0.58);
+    box-shadow: 0 18px 54px rgba(125, 91, 91, 0.1);
+    backdrop-filter: blur(18px);
+  }
+
+  .jp-soft-card {
+    background: rgba(255, 253, 251, 0.88);
+    border: 1px solid rgba(220, 195, 190, 0.72);
+    box-shadow: 0 18px 44px rgba(111, 87, 80, 0.08);
+  }
+
+  .jp-primary-button {
+    background: linear-gradient(135deg, #9f5f68 0%, #c98891 48%, #8da895 100%);
+    color: #fffdfb;
+    box-shadow: 0 16px 34px rgba(159, 95, 104, 0.24);
+  }
+
+  .jp-primary-button:hover {
+    filter: brightness(0.98) saturate(1.04);
+    box-shadow: 0 18px 42px rgba(159, 95, 104, 0.3);
+  }
+
+  .jp-range {
+    accent-color: #a9616c;
+  }
+
+  .jp-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(169, 97, 108, 0.35) transparent;
+  }
+}

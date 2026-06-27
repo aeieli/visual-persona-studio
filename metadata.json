@@ -1,0 +1,6 @@
+{
+  "name": "パーソナルイメージデザイン＆コーディネート",
+  "description": "AIがあなたの顔の特徴と体型バランスを分析し、ヘアスタイル・トップス・ボトムス・シューズの4つのゾーンでスマートなコーディネートを提案。リアルタイムのスワイプ試着に対応し、コーデ画像・ポスター・3Dクリスタルグッズなどのワンタップ書き出し機能も備えています。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
